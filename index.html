@@ -84,7 +84,7 @@
       const minuto = agora.getMinutes();
       const minutosAgora = hora * 60 + minuto;
       const inicioPermitido = 18 * 60 + 30;
-      const fimPermitido = 20 * 60;
+      const fimPermitido = 23 * 60;
       return minutosAgora >= inicioPermitido && minutosAgora <= fimPermitido;
     }
 
@@ -100,7 +100,7 @@
 
     function verificarTudo() {
       if (!verificarHorarioPermitido()) {
-        document.getElementById("status").innerText = "Presença permitida apenas entre 18h30 e 20h.";
+        document.getElementById("status").innerText = "Presença permitida apenas entre 18h30 e 23h.";
         return;
       }
 
